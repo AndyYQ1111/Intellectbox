@@ -1,0 +1,6 @@
+framework module JL_BLE {
+  umbrella header "JL_BLE.h"
+
+  export *
+  module * { export * }
+}

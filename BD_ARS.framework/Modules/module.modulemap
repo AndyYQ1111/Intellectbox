@@ -1,0 +1,6 @@
+framework module BD_ARS {
+  umbrella header "BD_ARS.h"
+
+  export *
+  module * { export * }
+}

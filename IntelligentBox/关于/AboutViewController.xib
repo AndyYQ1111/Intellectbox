@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fiz-PR-GLb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="63"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-aW-Vmm">
+                            <rect key="frame" x="130" y="32" width="115" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="hiD-Lq-oxY"/>
+                                <constraint firstAttribute="height" constant="21" id="szf-SN-Qfo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-Gh-GHz">
+                            <rect key="frame" x="8" y="25" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="0pZ-yw-bzB"/>
+                                <constraint firstAttribute="height" constant="35" id="uXa-Sp-q25"/>
+                            </constraints>
+                            <state key="normal" image="k_E_0002"/>
+                            <connections>
+                                <action selector="leftBtnAction:" destination="-1" eventType="touchUpInside" id="uM9-0x-Kri"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="PSX-aW-Vmm" firstAttribute="centerX" secondItem="Fiz-PR-GLb" secondAttribute="centerX" id="FcD-3O-tIh"/>
+                        <constraint firstItem="q2r-Gh-GHz" firstAttribute="leading" secondItem="Fiz-PR-GLb" secondAttribute="leading" constant="8" id="LEd-kX-KvY"/>
+                        <constraint firstAttribute="bottom" secondItem="q2r-Gh-GHz" secondAttribute="bottom" constant="3" id="WZb-bv-18f"/>
+                        <constraint firstAttribute="bottom" secondItem="PSX-aW-Vmm" secondAttribute="bottom" constant="10" id="mTv-Tt-6MM"/>
+                        <constraint firstAttribute="height" constant="63" id="sxb-oH-ki4"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="k55_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="d1E-iO-cV0">
+                    <rect key="frame" x="127" y="183.5" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="BKp-5S-7NB"/>
+                        <constraint firstAttribute="width" constant="120" id="uhh-4n-HNF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="深圳市索爱无线互联科技有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtc-3b-h3a">
+                    <rect key="frame" x="74.5" y="616" width="226" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="226" id="gOL-wF-Pjg"/>
+                        <constraint firstAttribute="height" constant="21" id="oth-Z1-GRC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shenzhen Soaiy Technology Co.,Ltd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dZ-TG-Jxr">
+                    <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Uuw-ue-sDy"/>
+                        <constraint firstAttribute="width" constant="375" id="cK6-W4-qff"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V1.0.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whs-1x-2sH">
+                    <rect key="frame" x="127" y="315.5" width="120" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="H3h-0A-hUL"/>
+                        <constraint firstAttribute="width" constant="120" id="s5R-ta-Qv3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="d1E-iO-cV0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5m9-y7-EV2"/>
+                <constraint firstItem="Fiz-PR-GLb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="B1a-q8-ECe"/>
+                <constraint firstItem="Fiz-PR-GLb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dyp-Ag-SBu"/>
+                <constraint firstItem="d1E-iO-cV0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-90" id="XE3-ak-eLC"/>
+                <constraint firstItem="0dZ-TG-Jxr" firstAttribute="top" secondItem="mtc-3b-h3a" secondAttribute="bottom" id="XpE-Q7-cjY"/>
+                <constraint firstAttribute="trailing" secondItem="0dZ-TG-Jxr" secondAttribute="trailing" id="aI5-9I-Qeg"/>
+                <constraint firstItem="whs-1x-2sH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btN-Me-qNb"/>
+                <constraint firstItem="0dZ-TG-Jxr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dzK-yI-JJa"/>
+                <constraint firstAttribute="bottom" secondItem="0dZ-TG-Jxr" secondAttribute="bottom" id="gKk-Pc-I4w"/>
+                <constraint firstAttribute="trailing" secondItem="Fiz-PR-GLb" secondAttribute="trailing" id="hQQ-Q6-die"/>
+                <constraint firstItem="whs-1x-2sH" firstAttribute="top" secondItem="d1E-iO-cV0" secondAttribute="bottom" constant="12" id="j3Y-OQ-vnJ"/>
+                <constraint firstItem="mtc-3b-h3a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="skb-4C-ymL"/>
+            </constraints>
+            <point key="canvasLocation" x="111.5" y="-299.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="k55_Icon" width="512" height="512"/>
+        <image name="k_E_0002" width="24" height="24"/>
+    </resources>
+</document>

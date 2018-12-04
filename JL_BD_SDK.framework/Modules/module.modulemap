@@ -1,0 +1,6 @@
+framework module JL_BD_SDK {
+  umbrella header "JL_BD_SDK.h"
+
+  export *
+  module * { export * }
+}
