@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (4.7.3)
+  - GTMRefresh (1.3.6)
+  - Kingfisher (4.10.1)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SnapKit (4.2.0)
+  - TFSegment (1.0.1):
+    - TFSegment/Custom (= 1.0.1)
+  - TFSegment/Custom (1.0.1)
+  - Toast-Swift (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - GTMRefresh
+  - Kingfisher
+  - SDWebImage
+  - SnapKit
+  - TFSegment
+  - Toast-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - GTMRefresh
+    - Kingfisher
+    - SDWebImage
+    - SnapKit
+    - TFSegment
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  GTMRefresh: 9231cbdc1dca88d0a29daead8d6bd83314aa84dc
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  TFSegment: 3aeaed035999819cb9f2653601fa65cd94b8c027
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+
+PODFILE CHECKSUM: 7fbead678ce730d2e7f9356ecd0756186709e05f
+
+COCOAPODS: 1.5.2

@@ -13,6 +13,7 @@
 #import "MainTabControllerView.h"
 #import "LMSideBarDepthStyle.h"
 #import "JLDefine.h"
+#import "IntelligentBox-Swift.h"
 
 @interface ECRootViewController ()
 
@@ -25,10 +26,10 @@
 -(void)awakeFromNib{
     
     [super awakeFromNib];
-    
-    
-    [self stepUpSiderView];
-    
+        [self stepUpSiderView];
+
+//    UINavigationController *nav = [[BaseNavigationController alloc]initWithRootViewController:[IndexVC new]];
+//    [self setContentViewController:nav];
 }
 
 
@@ -48,9 +49,6 @@
     [self setMenuViewController:leftVC forDirection:LMSideBarControllerDirectionLeft];
     [self setSideBarStyle:sideBarStyle forDirection:LMSideBarControllerDirectionLeft];
     [self setContentViewController:mainVC];
-    
-
-    
 }
 
 #pragma mark - SIDE BAR DELEGATE

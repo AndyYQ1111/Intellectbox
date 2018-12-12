@@ -98,7 +98,6 @@ static int receiveNoticeCount;
         //TTS初始化
         
         
-        
         //转场音效播放
         NSString *urlStr = [[NSBundle mainBundle] pathForResource:@"cutTo" ofType:@"mp3"];
         // (2)把音频文件转化成url格式
@@ -168,15 +167,12 @@ static int receiveNoticeCount;
     WeakSelf
     
     NSMutableArray *listArarry = [NSMutableArray array];
-    //    self->textArray = [[NSMutableArray alloc]initWithCapacity:10];
-//    NSString *urlCD = sModel.answerAudioUrl;
     
     self->_mUrl = sModel.answerAudioUrl;
     
-    
+    // 提醒 || [sModel.servcie isEqualToString:@"reminder"]
     //要 有闹钟
-    if([sModel.servcie isEqualToString:@"clock"] || [sModel.servcie isEqualToString:@"reminder"]){
-        
+    if([sModel.servcie isEqualToString:@"reminder"] || [sModel.servcie isEqualToString:@"clock"]){
         NSString *delayTime = sModel.dateTime;
         NSDateFormatter *dataFormate = [[NSDateFormatter alloc] init];
         [dataFormate setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
@@ -184,8 +180,9 @@ static int receiveNoticeCount;
         self->alarmDate = [dataFormate dateFromString:delayTime];
         NSDate *nowData = [NSDate date];
         delay = [DFTime gapOfDateA:self->alarmDate DateB:nowData];
-        
-        
+    }
+    
+    if([sModel.servcie isEqualToString:@"clock"] ){
         NSString * timeS = sModel.dateTime;
         NSString * xianzai = [self getsTheCurrentTime];
         NSInteger yuyue = [self dateToTimeStampAtThe:timeS];
@@ -235,13 +232,10 @@ static int receiveNoticeCount;
             tempModel.mTitle = audioModel.title;
             tempModel.mUrl = [audioModel.playUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
             tempModel.mMediaItem = @"序幕播报";
-            tempModel.mIndex = i+1;
-            [self->currentArray addObject:tempModel];
-            //                [[JL_BDSpeechAI sharedMe] speakTxt:@""];
             if (sModel.audioList.count-1 == i) {
                 self->_mUrl = audioModel.playUrl;
             }
-            if ((audioModel.title.length > 0 && ![audioModel.title isEqualToString:@" "])) {
+            if ((audioModel.playUrl.length > 0 && ![audioModel.playUrl isEqualToString:@" "])) {
                 //播放界面值
                 MusicOfPhoneMode *tempModel = [MusicOfPhoneMode new];
                 tempModel.mTitle = audioModel.title;
@@ -249,6 +243,9 @@ static int receiveNoticeCount;
                 tempModel.mIndex = i;
                 //记录界面值
                 [listArarry addObject:[weakSelf apiResponseToDictionary:audioModel]];
+                
+                tempModel.mIndex = i;
+                [self->currentArray addObject:tempModel];
             }
             
         }
@@ -268,16 +265,20 @@ static int receiveNoticeCount;
 #pragma mark -语音转文字后到后台获取资源
 - (void)getInterData:(NSString *)text {
     
-//    text = @"设置15秒钟后的闹钟";
+//    text = @"两分钟后提醒我喝水";
 //    serverUrl = @"http://121.42.196.244:4112/";
-    
+
+    if(_currentCity==nil){
+        _currentCity = @"";
+    }
     
     NSString *url = [NSString stringWithFormat:@"%@goform/GetResultByIntelligent", serverUrl];
     NSDictionary *paraDic = @{
                               @"devId" : [ToolManager getDefaultData:DEVICE_ID] ? [ToolManager getDefaultData:DEVICE_ID] : @"",
                               @"BTAddress" : @"",
                               @"token" : [ToolManager getDefaultData:@"token"] ? [ToolManager getDefaultData:@"token"] : @"",
-                              @"text" : text
+                              @"text" : text,
+                              @"city" : self.currentCity
                               };
     NSLog(@"%@?devId=%@&BTAddress=&token=%@&text=%@",url,[ToolManager getDefaultData:DEVICE_ID] ? [ToolManager getDefaultData:DEVICE_ID] : @"",[ToolManager getDefaultData:@"token"] ? [ToolManager getDefaultData:@"token"] : @"",text);
     
@@ -371,9 +372,7 @@ static int receiveNoticeCount;
 //播报结束
 - (void)musicState:(NSNotification *)note {
     MusicOfPhoneMode *currentModel = [DFAudioPlayer currentPlayer].mNowItem;
-    //    if ([note.object isEqualToString:@"DF_PLAY"]) {
-    //        receiveNoticeCount ++;
-    //    }
+
     if (([note.object isEqualToString:@"DF_FINISH"] || [note.object isEqualToString:@"DF_PAUSE"])) {
         if (index == 2) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -388,7 +387,7 @@ static int receiveNoticeCount;
             index = 0;
         }
         
-        NSLog(@">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  %d   %@        >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>",index,currentModel.mUrl);
+        NSLog(@">>>>%d------%ld",index,(long)currentModel.mIndex);
     }
     
     if ([currentModel.mMediaItem isEqualToString:@"序幕播报"]) {
@@ -755,9 +754,7 @@ static int receiveNoticeCount;
     
     [DFNotice remove:kDFAudioPlayer_NOTE Own:self];
     [DFNotice remove:@"indexPathRow" Own:self];
-    
 }
-
 
 #pragma mark TTS语音合成
 /*TTS*/

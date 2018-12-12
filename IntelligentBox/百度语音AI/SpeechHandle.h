@@ -40,6 +40,8 @@
 
 @property(nonatomic,strong) AVAudioPlayer *cutToPlayer;
 
+@property(nonatomic,strong)NSString *currentCity;
+
 +(instancetype)sharedInstance;
 -(void)playCutToMusic;
 -(void)stopCutTopMusic;

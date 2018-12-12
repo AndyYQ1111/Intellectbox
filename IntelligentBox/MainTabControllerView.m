@@ -78,9 +78,9 @@
         [SpeechHandle sharedInstance];
         
         [self setSelectedIndex:0];
-        //获取权限
+        //获取
         [[GetLocalization sharedInstance] startUpdateLocalization:^(NSString *city) {
-            
+            [SpeechHandle sharedInstance].currentCity = city;
         }];
     }];    
 }

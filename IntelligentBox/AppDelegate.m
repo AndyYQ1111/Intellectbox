@@ -20,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-   //UIWindow *win = [DFUITools getWindow];
+    //UIWindow *win = [DFUITools getWindow];
     /*--- 检测当前语言 ---*/
     if (![kJL_GET hasPrefix:@"zh-Hans"]) {
         kJL_SET("en");
@@ -72,7 +72,7 @@
             }];
         }
     }];
-     
+    
     return YES;
 }
 
@@ -81,13 +81,13 @@
     [JL_Talk talkRemove];
     
     [DFAction delay:1.0 Task:^{
-     BOOL connectFlag = [[JL_Listen sharedMe] connectBLE];
+        BOOL connectFlag = [[JL_Listen sharedMe] connectBLE];
         if(!connectFlag){
             [self->bleCtrl startScanBLE];
         }
     }];
 }
- 
+
 -(void)alertBLE_IsOFF {
     //[self showAlert:@"请在APP左侧边栏，连接设备蓝牙4.0。" Tag:0];
 }
@@ -116,14 +116,14 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-
+    
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-//    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord
-//                                     withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
-//                                           error:nil];
+    //    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord
+    //                                     withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
+    //                                           error:nil];
 }
 
 -(void)remoteControlReceivedWithEvent:(UIEvent*)event{
@@ -145,7 +145,7 @@
 
 
 -(void)addNote{
-     [DFNotice add:kUI_DEVICE_DISCONNECT Action:@selector(noteBTDisconnected:) Own:self];
+    [DFNotice add:kUI_DEVICE_DISCONNECT Action:@selector(noteBTDisconnected:) Own:self];
     [DFNotice add:@"DISCONNECT_BT" Action:@selector(disconnectBT) Own:self];
 }
 
