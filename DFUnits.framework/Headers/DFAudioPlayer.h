@@ -132,14 +132,20 @@ typedef enum : NSUInteger {
 #pragma mark - 操作方法
 /**
  *  @used 设置手机音量。
- *  @param volume 音量
+ *  @param  volume（音量）
  */
 -(void)setPhoneVolume:(float)volume;
 
-
+/**
+ *  @used 获取手机音量。
+ *  @param  volume（音量）
+ */
 +(float)getPhoneVolume;
 
-
+/**
+ *  @used 获取播放器音量。
+ *  @param  volume（音量）
+ */
 +(float)getPlayerVolume;
 
 /**
@@ -158,7 +164,7 @@ typedef enum : NSUInteger {
  *       }
  *
  *  @used 响应远程事件，用于锁频切歌等功能。
- *  @param event （事件类）
+ *  @param  event（事件类）
  */
 +(void)receiveRemoteEvent:(UIEvent*)event;
 
@@ -179,7 +185,7 @@ typedef enum : NSUInteger {
 
 /**
  *  @used 选择播放对应序号的音乐。
- *  @param index 0...N）
+ *  @param  index（序号 0...N）
  */
 -(void)didPlay:(NSInteger)index;
 

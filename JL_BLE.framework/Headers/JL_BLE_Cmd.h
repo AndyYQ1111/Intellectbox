@@ -117,6 +117,11 @@
 
 #define mark 【设备音乐】部分 -------------
 /**
+ * 获取设备播放状态。
+ */
++(uint32_t)cmdDeviceMusicPlayStatus;
+
+/**
  * 获取设备音乐状态。
  */
 +(uint32_t)cmdDeviceMusicProgressStatus;
@@ -604,6 +609,21 @@
                 Folder:(uint16_t)fd
                   Card:(uint8_t)num;
 
+/**
+ *  【只适用于 AIMate APP】！！！
+ *   获取设备lisence。
+ */
++(uint32_t)cmdDeviceLisence;
+
+/**
+ *  【只适用于 AIMate APP】！！！
+ *   保存lisence。
+ */
++(uint32_t)cmdSaveLisence:(NSString*)lisence;
+
+#pragma mark --------------------------------
+
+
 #pragma mark【只适用于 CMD APP】
 /**
  *  【只适用于 CMD APP】！！！
@@ -666,11 +686,6 @@
 +(uint32_t)cmdAlarmClockDeleteWithIndex:(uint8_t)index;
 
 
-/**
- *  【只适用于 CMD APP】！！！
- *   获取设备lisence。
- */
-+(uint32_t)cmdDeviceLisence;
 
 
 /**

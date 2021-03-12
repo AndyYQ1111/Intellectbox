@@ -25,13 +25,15 @@
 #import <DFUnits/DFUnits.h>
 #import "MusicMainModel.h"
 #import "AlarmObject.h"
+#import "BDKit.h"
 
 static NSString *serverUrl;
 static int receiveNoticeCount;
 
 @interface SpeechHandle()<AISTTSPlayerDelegate>{
     
-    JL_BDSpeaker    *baiduSpeaker;
+//    JL_BDSpeaker    *baiduSpeaker;
+    BDKit           *baiduSpeaker;
     DFTips          *loadingView;
     
     NSTimer    *dateCheck;

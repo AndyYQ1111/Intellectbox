@@ -135,6 +135,7 @@
 		30F504F51FC7FD7C0077AF40 /* CalculatorProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F504F41FC7FD7C0077AF40 /* CalculatorProcessor.m */; };
 		30F504F91FC8183F0077AF40 /* CalendarProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F504F81FC8183F0077AF40 /* CalendarProcessor.m */; };
 		30F504FC1FC826BB0077AF40 /* AlarmProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F504FB1FC826BB0077AF40 /* AlarmProcessor.m */; };
+		52C8724F25F8582A0046514E /* libBDKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C8724E25F858290046514E /* libBDKit.a */; };
 		5A0E8A2C21B8B28F007E9121 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8A2821B8B28E007E9121 /* BaseTableViewCell.swift */; };
 		5A0E8A2D21B8B28F007E9121 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8A2921B8B28F007E9121 /* BaseNavigationController.swift */; };
 		5A0E8A2F21B8B28F007E9121 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E8A2B21B8B28F007E9121 /* BaseViewController.swift */; };
@@ -539,12 +540,14 @@
 		30F504F81FC8183F0077AF40 /* CalendarProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarProcessor.m; sourceTree = "<group>"; };
 		30F504FA1FC826BB0077AF40 /* AlarmProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmProcessor.h; sourceTree = "<group>"; };
 		30F504FB1FC826BB0077AF40 /* AlarmProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmProcessor.m; sourceTree = "<group>"; };
+		52C8724E25F858290046514E /* libBDKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBDKit.a; sourceTree = "<group>"; };
+		52C8725125F858340046514E /* BDKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDKit.h; sourceTree = "<group>"; };
 		59D894601E0C82290BCB4BD6 /* Pods-IntelligentBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelligentBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntelligentBox/Pods-IntelligentBox.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0E8A2221B8B244007E9121 /* IntelligentBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IntelligentBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A0E8A2821B8B28E007E9121 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		5A0E8A2921B8B28F007E9121 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5A0E8A2B21B8B28F007E9121 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		5A0E8A3021B8B33E007E9121 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; };
+		5A0E8A3021B8B33E007E9121 /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5A0E8A3321B8B57E007E9121 /* Validate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
 		5A0E8A3421B8B57E007E9121 /* PhotoCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCenter.swift; sourceTree = "<group>"; };
 		5A0E8A3521B8B57E007E9121 /* NetWorkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTools.swift; sourceTree = "<group>"; };
@@ -860,6 +863,7 @@
 				04E4ED3420BBA45F0000268F /* DFUnits.framework in Frameworks */,
 				04944A2620622C00004ED0E7 /* JL_BD_SDK.framework in Frameworks */,
 				0065CFCE205951040010CAFC /* libStreamingKit.a in Frameworks */,
+				52C8724F25F8582A0046514E /* libBDKit.a in Frameworks */,
 				04FA0EDD1FB971F7009B5C7F /* AudioToolbox.framework in Frameworks */,
 				042AEB841FD546C7007A6CE5 /* BD_ARS.framework in Frameworks */,
 				5A14EC6321A8E14700493DA9 /* libDUILite_ios_CloudTTS.a in Frameworks */,
@@ -1097,6 +1101,8 @@
 		044FE1F81FBA93F00069CF0C /* 百度语音AI */ = {
 			isa = PBXGroup;
 			children = (
+				52C8725125F858340046514E /* BDKit.h */,
+				52C8724E25F858290046514E /* libBDKit.a */,
 				5A14EC5821A8E14700493DA9 /* TTS */,
 				A643EBB31FBD41060007455C /* SpeechHandle.h */,
 				A643EBB41FBD41060007455C /* SpeechHandle.m */,
@@ -2615,7 +2621,9 @@
 					"$(PROJECT_DIR)/IntelligentBox/音乐播放页面",
 					"$(PROJECT_DIR)/IntelligentBox/百度语音AI/TTS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/IntelligentBox/百度语音AI",
 				);
+				MARKETING_VERSION = 1.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
@@ -2661,7 +2669,9 @@
 					"$(PROJECT_DIR)/IntelligentBox/音乐播放页面",
 					"$(PROJECT_DIR)/IntelligentBox/百度语音AI/TTS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/IntelligentBox/百度语音AI",
 				);
+				MARKETING_VERSION = 1.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";

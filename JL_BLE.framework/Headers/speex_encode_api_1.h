@@ -21,7 +21,7 @@ typedef struct _JL_SPEEX_EN_FILE_IO_
 
 
 typedef struct __SPEEX_ENC_OPS_1 {
-    u32 (*need_buf)(void);
+    u32 (*need_buf)();
     void (*open)(u8 *ptr,JL_SPEEX_EN_FILE_IO *audioIO,u8 complexity);
     u32 (*run)(u8 *ptr);
 }speex_enc_ops_1;
@@ -29,8 +29,8 @@ typedef struct __SPEEX_ENC_OPS_1 {
 
 //int  test_andrio_addfun_gcc_1(int a1,int a2);
 
-extern speex_enc_ops_1 *get_speex_enc_obj_1(void);         //����
-extern audio_decoder_ops_1 *get_speex_ops_1(void);         //����
+extern speex_enc_ops_1 *get_speex_enc_obj_1();         //����
+extern audio_decoder_ops_1 *get_speex_ops_1();         //����
 
 #endif
 

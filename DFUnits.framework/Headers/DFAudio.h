@@ -68,6 +68,13 @@ struct DF_Data
 -(void)didPlayerInputBuffer:(NSData*)data;
 
 /**
+ PCM缓存可用空间。
+
+ @return 大小
+ */
+-(uint32_t)didRingUsable;
+
+/**
  *  用途:运行【Player】
  */
 -(void)didPlayerStart;

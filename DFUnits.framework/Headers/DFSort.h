@@ -20,7 +20,10 @@ void DescendingSort(int* arr,int left, int right);
 void AscendingSort(int* arr,int left, int right);
 
 
-
+/**
+ *  打乱数组顺序。
+ *  @param   array
+ */
 +(NSArray*)arrayRandom:(NSArray*)array;
 
 

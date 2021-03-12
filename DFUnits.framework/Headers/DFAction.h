@@ -10,7 +10,7 @@
 
 
 
-typedef void(^Action)(void);
+typedef void(^Action)();
 
 @interface DFAction : NSObject
 
@@ -64,9 +64,15 @@ typedef void(^Action)(void);
  */
 +(NSTimer*)timingStart:(SEL)sel target:(id)objc Time:(NSTimeInterval)sec;
 
-
+/**
+ *  @how:暂停定时处理.
+ *  @return   NSTimer
+ */
 +(void)timingPause:(__weak NSTimer*)timer;
-
+/**
+ *  @how:继续定时处理.
+ *  @return   NSTimer
+ */
 +(void)timingContinue:(__weak NSTimer*)timer;
 /**
  *  @how:摧毁定时处理功能.

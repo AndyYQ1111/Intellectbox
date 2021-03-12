@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <DFUnits/DFUnits.h>
 
+
+
 #define kBT_DEVICE_FAIL_CONNECT     @"BT_DEVICE_FAIL_CONNECT"
 #define kBT_DEVICES_DISCOVERED      @"BT_DEVICES_DISCOVERED"
 #define kBT_DEVICE_CONNECTED        @"BT_DEVICE_CONNECTED"
@@ -23,8 +25,13 @@
 
 #define kBT_REC_SPEEX_DATA          @"BT_REC_SPEEX_DATA"            //SPEEX配对数据(接收)
 
+#define kBT_REC_USER_DATA           @"BT_REC_USER_DATA"             //用户数据(接收)
+#define kBT_SEND_USER_DATA          @"BT_SEND_USER_DATA"            //用户数据(发送)
+
+
 #define kBT_REC_UPDATE_DATA         @"BT_REC_UPDATE_DATA"           //固件升级数据（接收）
 #define kBT_SEND_UPDATE_DATA        @"BT_SEND_UPDATE_DATA"          //固件升级数据（发送）
+
 #define kBT_UPDATE_START            @"BT_UPDATE_START"              //开始固件升级
 #define kBT_UPDATE_INFO             @"BT_UPDATE_INFO"               //固件升级信息
 #define kBT_UPDATE_LOG              @"BT_UPDATE_LOG"                //固件打印信息
@@ -388,6 +395,36 @@
  */
 #define kCMD_ADEV_ST            @"CMD_ADEV_ST"
 
+/*--- 获取设备Lisence ---/
+ *   获取【设备Lisence】
+ *   返回Lisence字符串
+ */
+#define kCMD_LISENCE            @"CMD_LISENCE"
+
+/*--- 获取杰理Lisence ---/
+ *   获取【杰理Lisence】
+ *   返回Lisence字符串
+ */
+#define kCMD_JL_LISENCE         @"CMD_JL_LISENCE"
+
+
+/*--- 获取平台设置 ---/
+ * (返回 4 bytes)
+ *  1 保留
+ *  2 语音识别平台选择:
+ *      0：百度
+ *      1：科大讯飞
+ * 3 语意解析平台选择:
+ *      0：老树
+ *      1：deepbrain
+ * 4 tts接口选择:
+ *      0：女声
+ *      1：男声
+ *      2：女童声
+ *      3：男童声
+ */
+#define kCMD_PFCF_INFO          @"CMD_PFCF_INFO"
+
 #pragma mark【只适用于 CMD App】
 /*--- 闹钟信息 ---/
  *  【CMD APP】闹钟信息
@@ -401,13 +438,6 @@
  *   int 数量
  */
 #define kCMD_CLOCK_NUM          @"CMD_CLOCK_NUM"
-
-#pragma mark【只适用于 CMD App】
-/*--- 获取设备Lisence ---/
- *  【CMD APP】获取设备Lisence
- *   返回Lisence字符串
- */
-#define kCMD_LISENCE            @"CMD_LISENCE"
 
 #pragma mark【只适用于 CMD App】
 /*--- 获取设备Version ---/
@@ -489,11 +519,13 @@
 #define kFRAME_CLUS             @"CLUS" //文件簇号
 #define kFRAME_APIC             @"APIC" //当前id3v2
 
+#define kFRAME_JLLI             @"JLLI" //杰理Lisence
 #define kFRAME_LICE             @"LICE" //设备Lisence
 #define kFRAME_VERN             @"VERN" //设备Version
 #define kFRAME_ALMN             @"ALMN" //闹钟总数
 #define kFRAME_ALMM             @"ALMM" //闹钟最大数目
 #define kFRAME_ALMI             @"ALMI" //闹钟信息
+#define kFRAME_PFCF             @"PFCF" //平台设置
 #define kFRAME_NTSW             @"NTSW" //网络资源信息
 #define kFRAME_ALCF             @"ALCF" //设备适配使能
 #define kFRAME_ADEV             @"ADEV" //全部设备的状态

@@ -31,8 +31,8 @@
 #define kDFPING_TIMEOUT @"DFPING_TIMEOUT"
 
 struct net_ping_addr_t{
-    const char * _Nonnull name;
-    const char * _Nonnull host;
+    const char *name;
+    const char *host;
     const int port;
 };
 typedef struct net_ping_addr_t n_ping_addr_t;
@@ -40,7 +40,7 @@ typedef struct net_ping_addr_t n_ping_addr_t;
  *  return 1:OK  0:Not good
  */
 int do_net_ping(void);
-int do_net_ping_1(n_ping_addr_t * _Nonnull paddrs);
+int do_net_ping_1(n_ping_addr_t *paddrs);
 
 
 
@@ -304,8 +304,8 @@ NS_ASSUME_NONNULL_END
 typedef void(^DFPING_RET)(int ret);
 @interface DFSimplePing : NSObject
 
-+(id _Nonnull )sharedMe;
--(void)pingNetWork:(DFPING_RET _Nonnull )result;
++(id _Nullable )sharedMe;
+-(void)pingNetWork:(DFPING_RET _Nullable )result;
 
 @end
 

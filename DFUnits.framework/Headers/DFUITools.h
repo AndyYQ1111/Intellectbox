@@ -15,11 +15,12 @@ typedef void (^TipsCompletion) (void);
 @class DFTips;
 @interface DFUITools : NSObject
 
-#define kDF_SCR_W_0             (int)[DFUITools screen_W]
-#define kDF_SCR_H_0             (int)[DFUITools screen_H]
+#define kDF_SCR_W_0         (int)[DFUITools screen_W]
+#define kDF_SCR_H_0         (int)[DFUITools screen_H]
 
-#define kDF_SCR_W_1             (int)[DFUITools screen_1_W]
-#define kDF_SCR_H_1             (int)[DFUITools screen_1_H]
+#define kDF_SCR_W_1         (int)[DFUITools screen_1_W]
+#define kDF_SCR_H_1         (int)[DFUITools screen_1_H]
+#define kDF_RGBA(r,g,b,a)   [UIColor colorWithRed:((r)/255.0) green:((g)/255.0) blue:((b)/255.0) alpha:(a)]
 
 #pragma mark 屏幕尺寸
 /**

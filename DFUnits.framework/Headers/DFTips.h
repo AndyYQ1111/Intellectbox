@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, DFTipsAnimation) {
 #endif
 
 #if NS_BLOCKS_AVAILABLE
-typedef void (^DFTipsCompletionBlock)(void);
+typedef void (^DFTipsCompletionBlock)();
 #endif
 
 

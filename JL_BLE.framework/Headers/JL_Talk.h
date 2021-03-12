@@ -10,6 +10,7 @@
 
 @interface JL_Talk : NSObject
 
++(void)talkPost:(NSDictionary*)dic;
 +(void)talkWrite:(NSDictionary*)dic;
 +(NSArray*)talkRed;
 +(void)talkRemove;

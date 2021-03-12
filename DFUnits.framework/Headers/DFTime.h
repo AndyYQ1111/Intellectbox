@@ -55,7 +55,11 @@
  */
 +(NSTimeInterval)differenceOfDateA:(NSString*)timeA AndDateB:(NSString*)timeB;
 
-
+/**
+ *  求两个时间点差值。(dateA-dateB)
+ *  @param   dateA
+ *  @param   dateB
+ */
 +(NSTimeInterval)gapOfDateA:(NSDate*)dateA DateB:(NSDate*)dateB;
 
 

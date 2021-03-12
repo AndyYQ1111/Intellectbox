@@ -11,8 +11,24 @@
 
 @interface DFTools : NSObject
 
+/**
+ *  NSString to NSMutableData
+ *  
+ *  @"ffff0000" => <ffff 0000>
+ *
+ *  @param str:NSString
+ *  @return NSMutableData
+ */
 +(NSMutableData*)HexToData:(NSString*)hex;
 
+/**
+ *  NSData to NSString
+ *
+ *  <ffff 0000> => @"ffff0000"
+ *
+ *  @param data:NSData
+ *  @return NSString
+ */
 +(NSString*)dataToHex:(NSData*)data;
 
 /**
@@ -54,7 +70,7 @@
 
 /**
  *	将 uint32_t 的4个字节转换成 NSData。
- *	@param endian   是否改变大小端
+ *	@param endian：是否改变大小端
  */
 +(NSData*)uInt32_data:(uint32_t)value Endian:(BOOL)endian;
 
@@ -63,15 +79,31 @@
  */
 +(NSData*)uInt16_data:(uint16_t)value;
 
-
+/**
+ *	将 uint16_t 的2个字节转换成 NSData。
+ *	@param endian：是否改变大小端
+ */
 +(NSData*)uInt16_data:(uint16_t)value Endian:(BOOL)endian;
 
 +(NSData*)uInt8_data:(uint8_t)value;
 
-
+/**
+ *  Change Big Or Small Endian(改变NSData的大小端。)
+ *  <000f> => <0f00>
+ *
+ *  @param data:NSData
+ *  @return NSData
+ */
 +(NSData*)changeBigOrSmall:(NSData*)data;
 
-
+/**
+ *  NSData to 10进制
+ *
+ *  <000f> => 16
+ *
+ *  @param data:NSData
+ *  @return NSInteger
+ */
 +(NSInteger)dataToInt:(NSData*)data;
 
 /**

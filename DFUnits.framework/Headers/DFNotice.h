@@ -14,28 +14,27 @@
 
 @interface DFNotice : NSObject
 
-
 /**
- 发送通知
-
- @param name 通知名字
- @param object 传递的对象
+ *  发送通知
+ *
+ *  @param name  :通知名字
+ *  @param object:传递的对象
  */
 +(void)post:(NSString*)name Object:(id)object;
 
 /**
-  监听通知
+ *  监听通知
  *
- *  @param name  通知名字
- *  @param action   实现方法
- *  @param own   监听者
+ *  @param name  :通知名字
+ *  @param action:实现方法
+ *  @param own   :监听者
  */
 +(void)add:(NSString*)name Action:(SEL)action Own:(id)own;
 
 /**
  *  监听取消
  *
- *  @param name 通知名字
+ *  @param name:通知名字
  *  @param own :监听者
  */
 +(void)remove:(NSString*)name Own:(id)own;
@@ -43,8 +42,8 @@
 /** (iOS 10.0 以上有效。)
  *  定时通知
  *
- *  @param date yyyyMMddHHmmss
- *  @param repeat 0-->不重复
+ *  @param date:yyyyMMddHHmmss
+ *  @param repeat:0 -->不重复
  */
 +(void)pushLocalNoticeDate:(NSString*)date
                         ID:(NSString*)noteId

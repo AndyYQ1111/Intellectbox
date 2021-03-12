@@ -27,7 +27,7 @@ FOUNDATION_EXPORT const unsigned char JL_BLEVersionString[];
 #import <JL_BLE/JL_Speex.h>
 #import <JL_BLE/JL_Talk.h>
 #import <JL_BLE/JL_vad.h>
-
+#import <JL_BLE/speex_method_test.h>
 
 #import <JL_BLE/JL_PM_SDK.h>
 #import <JL_BLE/JL_PM_Core.h>
@@ -35,8 +35,3 @@ FOUNDATION_EXPORT const unsigned char JL_BLEVersionString[];
 #import <JL_BLE/JL_PM_PKG.h>
 #import <JL_BLE/JL_PM_Cmd.h>
 #import <JL_BLE/JL_MIDI.h>
-
-
-
-
-

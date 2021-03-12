@@ -71,9 +71,9 @@ typedef struct __audio_decoder_ops_1 {
     u32 (*get_bp_inf)(void *work_buf);                        ///<��ȡ�ϵ���Ϣ
     
     //u32 (*need_workbuf_size)() ;                            ///<��ȡ�������������buffer
-    u32 (*need_dcbuf_size)(void) ;                               ///<��ȡ������Ҫ��buffer
-    u32 (*need_rdbuf_size)(void);                              ///<��ȡ�������buf�Ķ��ļ�����buf�Ĵ�С
-    u32 (*need_bpbuf_size)(void) ;                                ///<��ȡ����ϵ���Ϣ��Ҫ��buffer
+    u32 (*need_dcbuf_size)() ;                               ///<��ȡ������Ҫ��buffer
+    u32 (*need_rdbuf_size)();                              ///<��ȡ�������buf�Ķ��ļ�����buf�Ĵ�С
+    u32 (*need_bpbuf_size)() ;                                ///<��ȡ����ϵ���Ϣ��Ҫ��buffer
     
     //void (*set_dcbuf)(void* ptr);                            ///<���ý���buffer
     //void (*set_bpbuf)(void *work_buf,void* ptr);            ///<���öϵ㱣��buffer
